@@ -1,0 +1,95 @@
+@import 'https://fonts.googleapis.com/css?family=Inter';
+
+:root {
+    --dark: #1e1e1e;
+    --light: #fff;
+    --first: #fd3d0d;
+    --second: #fddd0d;
+    --third: #4b4b4b;
+    --fourth: #000;
+}
+
+@keyframes animateBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+body {
+    max-width: 50em;
+    color: #555;
+    font-family: "Inter", sans-serif;
+    margin: 0 auto;
+    padding: 8em 1em;
+    background-image: linear-gradient(90deg, var(--first), var(--second), var(--first), var(--second));
+    background-size: 300% 100%;
+    animation: animateBackground 5s infinite linear;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    padding: .5em;
+}
+
+h1,
+h2,
+strong {
+    color: #333;
+}
+
+.mode-select {
+    background-color: var(--dark);
+    color:#aaa;
+    width: 8em;
+    height: 8em;
+    top: 0px;
+    right: 0px;
+    border-bottom-left-radius: 100%;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    transition: width .5s, height .5s;
+}
+
+.dark-mode-button:hover .mode-select {
+    width: 12em;
+    height: 12em;
+}
+
+.fa-circle-half-stroke {
+    font-size: 3em;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    transition: font-size .5s, padding-left .5s, padding-bottom .5s;
+}
+
+.dark-mode-button:hover .fa-circle-half-stroke {
+    font-size: 5em;
+    padding-left: 45px;
+    padding-bottom: 30px;
+}
+
+.dark-toggle {
+    color: #aaa;
+    background-image: linear-gradient(90deg, var(--third), var(--fourth), var(--third), var(--fourth));
+}
+
+.dark-toggle h1,
+.dark-toggle h2,
+.dark-toggle strong {
+    color: #ddd;
+}
+
+.dark-toggle .mode-select {
+    background-color: var(--light);
+}
+
+.btn {
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 12px;
+}
